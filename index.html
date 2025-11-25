@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/asideStyle.css">
+    <!-- Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/rightStyle.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="img/logo.jpg" alt="logo">
+                    <h1>Weather</h1>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">space_dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#thisWeek" id="weekForecast">
+                    <span class="material-icons-sharp">date_range</span>
+                    <h3>This Week Forecast</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main mid part -->
+        <main>
+            <h1>Dashboard</h1>
+            <div class="search-bar">
+                <input type="text" id="search-city" placeholder="Search Location...">
+                <button id="search-button">
+                    <span class="material-icons-sharp">search</span>
+                </button>   
+            </div>
+
+            <div class="card">
+                <div class="left-side">
+                    <div class="city-temp">
+                        <div class="top">
+                            <div class="place">
+                                <span class="material-icons-sharp">place</span>
+                                <h2 class="city-name" id="current-city">Loading...</h2>
+                                <span class="current" id="date">--/--/----</span>
+                                <i class="fa fa-star-o" id="star"></i>
+                            </div>
+                        </div>
+                        <div class="mid">
+                            <h1><span class="current" id="temperature">-.- °C</span></h1>
+                        </div>
+                        <div class="bottom">
+                            <h4><span class="feels" id="feels">Loading...</span></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div id="icon"><img src="gifs/weatherload3.gif"></div>
+                    <div class="description" id="description">
+                        <h3 id="desc">Loading...</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card2">
+                <div class="wind">
+                    <div class="details">
+                        <h3>Wind</h3>
+                        <h6>Today's Wind Speed</h6>
+                        <h3><span class="current" id="wind-speed">-- m/s</span></h3>
+                    </div>
+                    <div class="icon"><img class="wIcon" src="https://cdn-icons-png.flaticon.com/512/481/481476.png" alt="wind"></div>
+                </div>
+
+                <div class="humidity">
+                    <div class="details">
+                        <h3>Humidity</h3>
+                        <h6>Today's Humidity</h6>
+                        <h3><span class="current" id="humidity">--</span></h3>
+                    </div>
+                    <div class="icon"><img class="wIcon" src="https://cdn-icons-png.flaticon.com/512/481/481459.png" alt="humidity"></div>
+                </div>
+
+                <div class="uv-index">
+                    <div class="details">
+                        <h3>UV-Index</h3>
+                        <h6>Today's UV-Index</h6>
+                        <h3><span class="current" id="uv-index">--</span></h3>
+                    </div>
+                    <div class="icon"><img class="wIcon" src="https://cdn-icons-png.flaticon.com/512/481/481461.png" alt="uv-index"></div>
+                </div>
+
+                <div class="pressure">
+                    <div class="details">
+                        <h3>Pressure</h3>
+                        <h6>Today's Pressure</h6>
+                        <h3><span class="current" id="pressure">--</span></h3>
+                    </div>
+                    <div class="icon"><img class="wIcon" src="https://cdn-icons-png.flaticon.com/512/481/481490.png" alt="pressure"></div>
+                </div>
+
+                <div class="visibility">
+                    <div class="details">
+                        <h3>Visibility</h3>
+                        <h6>Today's Visibility</h6>
+                        <h3><span class="current" id="visibility">--</span></h3>
+                    </div>
+                    <div class="icon"><img class="wIcon" src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="visibility"></div></div>
+
+                <div class="percipitation">
+                    <div class="details">
+                        <h3>Percipitation</h3>
+                        <h6>Today's Percipitation</h6>
+                        <h3><span class="current" id="ppt">--</span></h3>
+                    </div>
+                    <div class="icon"><img class="wIcon" src="https://cdn-icons-png.flaticon.com/512/481/481453.png" alt="precipitation"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right side -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <h1>Dashboard</h1>
+            </div>
+           <!-- <div class="theme-toggle" id="themeToggle">
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>-->
+
+            <div class="forecast" id="thisWeek">
+                <h2>5-Day forecast</h2>
+                <div class="today" id="current-temp">
+                    <div class="wDay" id="todayIcon">
+                        <img src="./gifs/loader.gif" alt="weather-icon">
+                    </div>
+                    <h2>Today</h2>
+                    <div>
+                        <div class="today-items">
+                            <div><h3>Min</h3></div>
+                            <div class="temp"><h3><span id="today_min">-</span></h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Max</h3></div>
+                            <div class="temp"><h3><span id="today_max">-</span></h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Sunrise</h3></div>
+                            <div class="temp"><h3><span id="today_sunrise">--:--</span></h3></div>
+                        </div>
+                        <div class="today-items">
+                            <div><h3>Sunset</h3></div>
+                            <div class="temp"><h3><span id="today_sunset">--:--</span></h3></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="weather-forecast" id="weather-forecast">
+                    <div class="weather-forecast-item">
+                        <div id="wicon1"><img src="./gifs/weekLoad.gif" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day1">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin1">-</span></h5></div>
+                          <div class="temp"><h5>Max <span id="tempMax1">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon2"><img src="./gifs/weekLoad.gif" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day2">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin2">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax2">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon3"><img src="./gifs/weekLoad.gif" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day3">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin3">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax3">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon4"><img src="./gifs/weekLoad.gif" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day4">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin4">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax4">-</span></h5></div>
+                    </div>
+                    <div class="weather-forecast-item">
+                        <div id="wicon5"><img src="./gifs/weekLoad.gif" alt="weather-icon" class="w-icon"></div>
+                        <div class="day"><h5><span id="day5">_</span></h5></div>
+                        <div class="temp"><h5>Min <span id="tempMin5">-</span></h5></div>
+                        <div class="temp"><h5>Max <span id="tempMax5">-</span></h5></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/index.js"></script>
+    <script src="https://kit.fontawesome.com/2f3e2a2e4f.js" crossorigin="anonymous"></script>
+</body>
+</html>
