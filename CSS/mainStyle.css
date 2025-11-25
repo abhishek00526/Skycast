@@ -1,0 +1,150 @@
+
+@import './root.css';
+.search-bar{
+    display: flex;
+   
+  width: 100%;
+  padding: 1em;
+}
+.search-bar:hover{
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 300ms;
+}
+main .search-bar #search-city{
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+}
+
+#search-button{
+    margin-left: auto;
+    background-color: var(--color-white);
+    background: rgba(255, 255, 255, 0);
+    color: var(--color-dark-variant);
+}
+main{
+    margin-top: 1.4em;
+    color: var(--color-dark);
+}
+
+main .city-temp .mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4em;
+}
+
+main .city-temp .bottom{
+    display: flex;
+    
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/*#date{
+   
+    margin-top: 1em;
+    padding: 0.5em 0.6em;
+    
+}*/
+main .card{
+    display: flex;
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1em;
+   
+    height: 300px;
+    width: 100%;    
+    /*background-image: url(https://marketplace.canva.com/EAFDL6gbGVM/1/0/1600w/canva-green-minimalist-illustrated-landscape-desktop-wallpaper-UwgW9eDIQrQ.jpg);*/
+}
+
+main .card .city-temp > div{
+    display: grid;
+    grid-template-rows: (3,1fr);
+    /*box-shadow: var(--box-shadow);*/
+}
+/*main .card .top-lft{
+    display: flex;
+}*/
+main .card .right-side{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    
+}
+main  > div{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 0.8em;
+    box-shadow: var(--box-shadow);
+}
+
+main .card2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background: var(--color-card);
+    gap: 1.2em;
+}
+main .card2 .icon{
+    margin-left: auto;
+    margin-right: auto;
+    width: 5em;
+    height: 5em;
+}
+main .card2 :hover{
+    background-attachment: fixed;
+   transform: scale(1.05);
+   transition: 0.3s;
+}
+
+main .card2 > div{
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1em;
+    box-shadow: var(--box-shadow);
+}
+.card .right-side img{
+    width: 12em;
+    height: 12em;
+}
+.card .right-side .description{
+    text-align: center;
+}
+.card .right-side .sun{
+    align-items: center;
+    justify-content: center;
+}
+h6{
+    color: darkgray;
+}
+main h1{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+/*phone Display*/
+@media screen and (max-width:768px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    main{
+        margin-top: 8em;
+        padding: 0 1em;
+    }
+    main h1{
+        display: none;
+    /*    margin:0;
+        font-size: 0;*/
+    }
+    main .mid h1{
+        display: inline-block;
+        font-size: 1.6em;
+    }
+}
