@@ -1,6 +1,6 @@
 
-@import './root.css';
-@import './rightStyle.css';
+@import 'root.css';
+@import 'rightStyle.css';
 aside{
     height: 100vh;
     /*background-color: var(--color-background);*/
